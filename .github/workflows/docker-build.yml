@@ -23,7 +23,7 @@ jobs:
       - id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/xxgv600/ysptp-docker
+          images: ghcr.io/xxgv600/cmg-live
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=ref,event=tag
