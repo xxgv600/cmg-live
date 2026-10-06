@@ -1,0 +1,14 @@
+services:
+  ysp-live:
+    build: .
+    image: ysp-live:v8.1
+    container_name: ysp-live
+    restart: unless-stopped
+    ports:
+      - "8767:8767"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - PYTHONUNBUFFERED=1
+      - YSP_DATA_DIR=/app/data
